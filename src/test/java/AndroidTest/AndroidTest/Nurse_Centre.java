@@ -33,37 +33,30 @@ public class Nurse_Centre extends Base{
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Add Nurse\"]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]"
-				+ "/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/"
-				+ "android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/"
-				+ "android.view.ViewGroup/android.widget.EditText[1]")).sendKeys("AutoNurse01");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-nurse-code\"]")).sendKeys("AutoNurse01");
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[2]")).click();
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[2]")).sendKeys("AutoFirstNurseName");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-first-name\"]")).sendKeys("AutoFirstNurseName");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[3]")).sendKeys("AutoLastNurseName");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-last-name\"]")).sendKeys("AutoLastNurseName");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/"
-				+ "android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/"
-				+ "android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]")).click();
+		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Nurse Type*\"]/android.widget.EditText")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.CheckedTextView[@resource-id=\"android:id/text1\" and @text=\"Cardiac Care Nurse\"]")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\"GENERAL\"]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/"
 				+ "android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//android.widget.CheckedTextView[@resource-id=\"android:id/text1\" and @text=\"GENERAL\"]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/"
-				+ "android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/"
-				+ "android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]")).click();
+		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Gender*\"]/android.widget.EditText")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.CheckedTextView[@resource-id=\"android:id/text1\" and @text=\"male\"]")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\"male\"]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[4]")).sendKeys("3");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-nurse-experience\"]")).sendKeys("3");
 	
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Birth Date*\"]")).click();
+		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Birth Date*\"]/android.widget.EditText")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"android:id/date_picker_header_year\"]")).click();
 		Thread.sleep(5000);
@@ -111,17 +104,10 @@ public class Nurse_Centre extends Base{
 	    By okBtn = By.id("android:id/button1");
 	    driver.findElement(okBtn).click();
 
-	    System.out.println("✅ Date Selection Completed Successfully");
+	    System.out.println("Date Selection Completed Successfully");
 	
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/"
-				+ "android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/"
-				+ "android.view.ViewGroup/android.widget.EditText[5]")).sendKeys("+917894561234");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/"
-				+ "android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/"
-				+ "android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[6]")).sendKeys("Warje, Pune-42");
-		
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[7]")).sendKeys("Pune");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[8]")).sendKeys("411042");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-shared-phone\"]")).sendKeys("+917894561234");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-address-street1\"]")).sendKeys("Warje, Pune-42");
 		Dimension size = driver.manage().window().getSize();
 	    int width = size.getWidth();
 	    int height = size.getHeight();
@@ -132,17 +118,21 @@ public class Nurse_Centre extends Base{
 				"direction", "up",
 				"percent",0.8));
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[4]")).sendKeys("MH");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[5]")).sendKeys("IN");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[6]")).sendKeys("NurseContactName");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.EditText[7]")).sendKeys("+919876543215");
-		driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/"
-				+ "android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/"
-				+ "android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/"
-				+ "android.view.ViewGroup/android.widget.EditText[8]")).sendKeys("nurseauto01@mailinator.com");
+		
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-address-city\"]")).sendKeys("Pune");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-address-pincode\"]")).sendKeys("411042");
+		
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-address-state\"]")).sendKeys("MH");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-address-country\"]")).sendKeys("IN");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-contact-name\"]")).sendKeys("NurseContactName");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-contact-phone\"]")).sendKeys("+919876543215");
+		driver.findElement(By.xpath("//android.widget.EditText[@resource-id=\"input-contact-email\"]")).sendKeys("nurseauto01@mailinator.com");
 		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Save Nurse\"]")).click();
 		
-		
+
+		String doctorcreatedpromptmessage = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Nurse Information Saved successfully!\"]")).getText();
+		String expectedpromptmessage= "Nurse Information Saved Successfully!";
+		boolean isEqual = doctorcreatedpromptmessage.equals(expectedpromptmessage);
 
 	}
 }

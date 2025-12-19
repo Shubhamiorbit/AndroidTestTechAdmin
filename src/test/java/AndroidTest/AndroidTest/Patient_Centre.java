@@ -4,12 +4,15 @@ import java.time.Duration;
 import java.util.Collections;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -84,6 +87,33 @@ public class Patient_Centre extends Base{
         		+ "android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/"
         		+ "android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.Spinner[1]")).click();
 	    driver.findElement(By.xpath("//android.widget.CheckedTextView[@resource-id=\"android:id/text1\" and @text=\"Male\"]")).click();
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"bloodGroupInput\"]")).click();
+	    driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"bloodGroup_optionText_AB+\"]")).click();
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"contactNameInput\"]")).sendKeys("EthixPatientContactName");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"phoneInput\"]")).sendKeys("8855236668");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"emailInput\"]")).sendKeys("Ethixpatient01@mailinator.com");
+	    Dimension size = driver.manage().window().getSize();
+	    int width = size.getWidth();
+	    int height = size.getHeight();
+		driver.executeScript("mobile: swipeGesture", ImmutableMap.of("left", width/4,
+				"top", height/4,
+				"width", width/2,
+				"height", height/2,
+				"direction", "up",
+				"percent",0.5));
+		Thread.sleep(5000);
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"streetInput\"]")).sendKeys("NA");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"cityInput\"]")).sendKeys("Pune");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"pincodeInput\"]")).sendKeys("411058");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"stateInput\"]")).sendKeys("MH");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"countryInput\"]")).sendKeys("IN");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"ageInput\"]")).sendKeys("57");
+	    driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"doctorCodeInput\"]")).sendKeys("EthixDoctor001");
+	    driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"addPatientButton\"]")).click();
+	    
+	    String patientcreatedpromptmessage = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Patient Information Saved successfully!\"]")).getText();
+		String expectedpromptmessage= "Patient Information Saved Successfully!";
+		boolean isEqual = patientcreatedpromptmessage.equals(expectedpromptmessage);
 	    
 	    
 	}

@@ -33,7 +33,7 @@ public class Base {
 	public void openapp() throws MalformedURLException {
 		
 		File f=new File("src/test/java");
-		File fs = new File(f,"techadmin1012 1.apk");		
+		File fs = new File(f,"TechAdminNew21.apk");		
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("appium:deviceName", "Samsung_A5");
@@ -54,8 +54,8 @@ public class Base {
 		}
 	public void loginusingstoredemailandpassword() throws InterruptedException {
 		
-		driver.findElement(By.xpath("//android.widget.EditText[@text=\"Enter Email\"]")).sendKeys("ethix@mailinator.com");
-		driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]")).sendKeys("788679282");
+		driver.findElement(By.xpath("//android.widget.EditText[@text=\"Enter Username\"]")).sendKeys("Ethix@mailinator.com");
+		driver.findElement(By.xpath("//android.widget.EditText[@text=\"Password\"]")).sendKeys("512586467");
 		driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Log in\"]")).click();		
 		Thread.sleep(10000);				 		
 	}
